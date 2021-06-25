@@ -1,0 +1,145 @@
+:root {
+    --colorShadeB: rgb(121, 186, 156);
+    --colorShadeC: rgb(150, 216, 232);
+    --colorShadeD: rgb(187, 232, 211);
+    --colorShadeE: rgb(205, 248, 255);
+  }
+  /* --backgroundColor: rgba(246, 241, 209);
+  --colorShadeB: rgb(121, 186, 156);
+  --colorShadeC: rgb(150, 232, 195);
+  --colorShadeD: rgb(187, 232, 211);
+  --colorShadeE: rgb(205, 255, 232); */
+  
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+  @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+
+    background-image: url('../assets/Background-img/bg1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+  }
+
+/* .container{
+    display: flex;
+} */
+.anime-chan-container{
+    /* display: flex; */
+    /* justify-content: center;*/
+    position: absolute; 
+    text-align: center;
+    top: 20%;
+    width: 100%;
+    /* padding: 5em; */
+
+}
+.anime-title{
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: 'Kiwi Maru', serif;
+  color: rgb(255, 255, 255);
+  background-color: rgba(180, 166, 166, 0.02);
+
+}
+.anime-quote{
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Kiwi Maru', serif;
+    color: rgb(3, 3, 3);
+    background-color: rgb(0, 0, 0,0.02);
+    margin: 0em 5em;
+  }
+.anime-char{
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: 'Kiwi Maru', serif;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0,0.02);
+}
+
+.button-container{
+    font-family: 'OpenSans', sans-serif;
+    font-size: 1rem;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 90vh;
+
+}
+
+
+  button {
+    position: relative;
+    /* display: inline-block; */
+    display: flex;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color:var(--colorShadeA);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: inherit;
+    color: rgb(75, 109, 109);
+
+    margin-top: 10em;
+
+
+  }
+  
+  button.big-button {
+     padding: 1em 2em;
+     border: 2px solid var(--colorShadeA);
+    border-radius: 1em;
+    background: var(--colorShadeE);
+  transform-style: preserve-3d;
+     transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  }
+  button.big-button::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--colorShadeC);
+    border-radius: inherit;
+      box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.75em 0 0 var(--colorShadeA);
+   transform: translate3d(0, 0.75em, -1em);
+       transition: all 175ms cubic-bezier(0, 0, 1, 1);
+  }
+  
+  
+  button.big-button:hover {
+    background: var(--colorShadeD);
+    transform: translate(0, 0.375em);
+  }
+  
+  button.big-button:hover::before {
+    transform: translate3d(0, 0.75em, -1em);
+  }
+  
+  button.big-button:active {
+              transform: translate(0em, 0.75em);
+  }
+  
+  button.big-button:active::before {
+    transform: translate3d(0, 0, -1em);
+    
+        box-shadow: 0 0 0 2px var(--colorShadeB), 0 0.25em 0 0 var(--colorShadeB);
+  
+  }
